@@ -8,7 +8,7 @@ function getComputerChoice() {
         return "scissors";
     }
     else {
-        return "aper";
+        return "paper";
     }
 }
 
@@ -19,12 +19,32 @@ function getHumanChoice() {
     return choice
 }
 
-console.log(getHumanChoice())
 
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound(getComputerChoice, getHumanChoice) {
-    let human = getHumanChoice.toLowerCase();
+function playRound() {
+    const human = getHumanChoice().toLowerCase();
+    const computer = getComputerChoice();
 
+    if( computer === "rock" && human === "scissors" ||
+        computer === "scissors" && human === "paper" ||
+        computer === "paper" && human === "rock"
+    ) {
+        computerScore++;
+        console.log("Computer won!");
+        console.log(`Computer: ${computerScore}, Human: ${humanScore}`)
+    }
+    else if(  
+    human === "rock" && computer === "scissors" ||
+    human === "scissors" && computer === "paper" ||
+    human === "paper" && computer === "rock"
+    ) {
+    humanScore++;
+    console.log("Human wins!")
+    console.log(`Human: ${humanScore}, Computer: ${computerScore}`)
+    ;
+    };
 }
+
+playRound()
