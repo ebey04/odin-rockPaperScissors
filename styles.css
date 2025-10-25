@@ -2,7 +2,7 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: lightgray;
+    background-color: rgb(238, 231, 231);
 }
 
 
@@ -16,7 +16,7 @@ header{
 h1{
     color: purple;
     font-size: 3rem;
-    text-shadow: 1px 5px 3px grey;
+    text-shadow: 1px 5px 3px rgb(142, 140, 140);
     font-family: "Macondo Swash Caps", 'Times New Roman', Times, serif;
 }
 
