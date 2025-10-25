@@ -12,19 +12,10 @@ function getComputerChoice() {
     }
 }
 
-
-
-function getHumanChoice() {
-    let choice = window.prompt("Rock, Paper or Scissors?")
-    return choice
-}
-
-
 let humanScore = 0;
 let computerScore = 0;
 
-function playRound() {
-    const human = getHumanChoice().trim().toLowerCase();
+function playRound(human) {
     const computer = getComputerChoice();
 
   if (
@@ -33,8 +24,9 @@ function playRound() {
   (computer === "paper" && human === "rock")
 ) {
   computerScore++;
-  console.log("Computer won!");
-  console.log(`Computer: ${computerScore}, Human: ${humanScore}`);
+  resultsCont.textContent = "Computer won!";
+  compScore.textContent = computerScore;
+  playerScore.textContent = humanScore;
 } 
 else if (
   (human === "rock" && computer === "scissors") ||
@@ -42,12 +34,14 @@ else if (
   (human === "paper" && computer === "rock")
 ) {
   humanScore++;
-  console.log("Human wins!");
-  console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+  resultsCont.textContent = "Human wins!";
+  compScore.textContent = computerScore;
+  playerScore.textContent = humanScore;
 } 
 else {
-  console.log(`It's a tie! Both chose ${human}.`);
-  console.log(`Scores → Human: ${humanScore}, Computer: ${computerScore}`);
+  resultsCont.textContent = `It's a tie! Both chose ${human}.`;
+  compScore.textContent = computerScore;
+  playerScore.textContent = humanScore;
 }
 }
 
@@ -67,12 +61,14 @@ function playGame() {
 
 /* DOM Elements */
 
-const resultsCont = document.getElementById(results)
-const compScore = document.getElementById(comp-score)
-const playerScore = document.getElementById(player-score)
-const paper = document.getElementById(paper)
-const scissors = document.getElementById(scissors)
-const rock = document.getElementById(rock)
+const resultsCont = document.getElementById("results")
+
+const compScore = document.getElementById("comp-score")
+const playerScore = document.getElementById("player-score")
+
+const paper = document.getElementById("paper")
+const scissors = document.getElementById("scissors")
+const rock = document.getElementById("rock")
 
 /* Event Listeners */
 
