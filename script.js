@@ -35,17 +35,17 @@ else if (
 ) {
   humanScore++;
   resultsCont.textContent = "Player wins!";
-  compScore.textContent = computerScore;
-  playerScore.textContent = humanScore;
+  compScore.textContent = `Computer: ${computerScore}`;
+  playerScore.textContent = `Player: ${humanScore}`;
 } 
 else {
-  resultsCont.textContent = `It's a tie! Both chose ${human}.`;
-  compScore.textContent = computerScore;
-  playerScore.textContent = humanScore;
+  resultsCont.textContent = `It's a tie! Both chose ${human}`;
+  compScore.textContent = `Computer: ${computerScore}`;
+  playerScore.textContent = `Player: ${humanScore}`;
 }
 
 if (computerScore === 5 || humanScore === 5) {
-  resultsCont.textContent = `${humanScore === 5 ? "Player" : "Computer"} has won the game!`;
+  resultsCont.textContent = `${humanScore === 5 ? "Player" : "Computer"} has won the thunderdome!!`;
   humanScore = 0;
   computerScore = 0;
 }
