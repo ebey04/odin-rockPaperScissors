@@ -45,7 +45,9 @@ else {
 }
 
 if (computerScore === 5 || humanScore === 5) {
-  resultsCont.textContent = `${humanScore === 5 ? "Player" : "Computer"} has won the thunderdome!!`;
+  resultsCont.textContent = ` Game over! ${humanScore === 5 ? "Player" : "Computer"} has won the thunderdome!!`;
+  resultsCont.classList.add("flash");
+  setTimeout(() => resultsCont.classList.remove("flash"), 2000);
   humanScore = 0;
   computerScore = 0;
 }
