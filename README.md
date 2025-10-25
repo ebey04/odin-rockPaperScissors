@@ -8,7 +8,7 @@ This project is the first in the JavaScript Foundations track through The Odin P
 
 ## 🔗 Live Demo
 
-View it here: 
+View it here: (https://ebey04.github.io/odin-rockPaperScissors/)
 
 ---
 
