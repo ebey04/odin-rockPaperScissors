@@ -34,7 +34,7 @@ else if (
   (human === "paper" && computer === "rock")
 ) {
   humanScore++;
-  resultsCont.textContent = "Human wins!";
+  resultsCont.textContent = "Player wins!";
   compScore.textContent = computerScore;
   playerScore.textContent = humanScore;
 } 
@@ -43,9 +43,13 @@ else {
   compScore.textContent = computerScore;
   playerScore.textContent = humanScore;
 }
+
+if (computerScore === 5 || humanScore === 5) {
+  resultsCont.textContent = `${humanScore === 5 ? "Player" : "Computer"} has won the game!`;
+  humanScore = 0;
+  computerScore = 0;
 }
-
-
+}
 
 
 function playGame() {
@@ -57,6 +61,8 @@ function playGame() {
   console.log("Game Over!");
   console.log(`Final Score → Human: ${humanScore}, Computer: ${computerScore}`);
 }
+
+
 
 
 /* DOM Elements */
