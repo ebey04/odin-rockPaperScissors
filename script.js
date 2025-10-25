@@ -12,7 +12,7 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice())
+
 
 function getHumanChoice() {
     let choice = window.prompt("Rock, Paper or Scissors?")
@@ -24,27 +24,45 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound() {
-    const human = getHumanChoice().toLowerCase();
+    const human = getHumanChoice().trim().toLowerCase();
     const computer = getComputerChoice();
 
-    if( computer === "rock" && human === "scissors" ||
-        computer === "scissors" && human === "paper" ||
-        computer === "paper" && human === "rock"
-    ) {
-        computerScore++;
-        console.log("Computer won!");
-        console.log(`Computer: ${computerScore}, Human: ${humanScore}`)
-    }
-    else if(  
-    human === "rock" && computer === "scissors" ||
-    human === "scissors" && computer === "paper" ||
-    human === "paper" && computer === "rock"
-    ) {
-    humanScore++;
-    console.log("Human wins!")
-    console.log(`Human: ${humanScore}, Computer: ${computerScore}`)
-    ;
-    };
+  if (
+  (computer === "rock" && human === "scissors") ||
+  (computer === "scissors" && human === "paper") ||
+  (computer === "paper" && human === "rock")
+) {
+  computerScore++;
+  console.log("Computer won!");
+  console.log(`Computer: ${computerScore}, Human: ${humanScore}`);
+} 
+else if (
+  (human === "rock" && computer === "scissors") ||
+  (human === "scissors" && computer === "paper") ||
+  (human === "paper" && computer === "rock")
+) {
+  humanScore++;
+  console.log("Human wins!");
+  console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+} 
+else {
+  console.log(`It's a tie! Both chose ${human}.`);
+  console.log(`Scores → Human: ${humanScore}, Computer: ${computerScore}`);
+}
 }
 
-playRound()
+
+
+
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    console.log(`Round ${i + 1}:`);
+    playRound();
+  }
+
+  console.log("Game Over!");
+  console.log(`Final Score → Human: ${humanScore}, Computer: ${computerScore}`);
+}
+
+
+playGame()
