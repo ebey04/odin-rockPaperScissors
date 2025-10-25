@@ -25,8 +25,8 @@ function playRound(human) {
 ) {
   computerScore++;
   resultsCont.textContent = "Computer won!";
-  compScore.textContent = computerScore;
-  playerScore.textContent = humanScore;
+  compScore.textContent = `Computer: ${computerScore}`;
+  playerScore.textContent = `Player: ${humanScore}`;
 } 
 else if (
   (human === "rock" && computer === "scissors") ||
