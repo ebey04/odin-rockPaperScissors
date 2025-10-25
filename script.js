@@ -8,8 +8,23 @@ function getComputerChoice() {
         return "scissors";
     }
     else {
-        return "paper";
+        return "aper";
     }
 }
 
 console.log(getComputerChoice())
+
+function getHumanChoice() {
+    let choice = window.prompt("Rock, Paper or Scissors?")
+    return choice
+}
+
+console.log(getHumanChoice())
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(getComputerChoice, getHumanChoice) {
+    let human = getHumanChoice.toLowerCase();
+
+}
