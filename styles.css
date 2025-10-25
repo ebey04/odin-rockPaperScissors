@@ -62,6 +62,7 @@ h1{
     font-weight: bold;
     font-family: "Quicksand", sans-serif;
     box-shadow: 2px 2px 4px rgb(210, 179, 5);
+    cursor: pointer;
 }
 
 .choice-btn:hover{
