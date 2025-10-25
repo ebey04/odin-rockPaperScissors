@@ -65,3 +65,12 @@ function playGame() {
 }
 
 
+/* DOM Elements */
+
+const resultsCont = document.getElementById(results)
+const compScore = document.getElementById(comp-score)
+const playerScore = document.getElementById(player-score)
+const paper = document.getElementById(paper)
+const scissors = document.getElementById(scissors)
+const rock = document.getElementById(rock)
+
