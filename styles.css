@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+
+
+/* Header Section */
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    color: purple;
+    font-size: 3rem;
+    text-shadow: 1px 5px 3px grey;
+}
+
+/* Results Section */
+
+#results{
+    border: 3px solid yellow;
+    height: 50vh;
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+/* Scoreboard Section */
+
+#scoreboard{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scores{
+    font-size: 1.5rem;
+}
+
+/* Buttons */
+
+#btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin: 2rem;
+}
+
+.choice-btn{
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    background-color: rgb(84, 55, 251);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgb(210, 179, 5);
+}
+
+.choice-btn:hover{
+    background-color: rgb(63, 50, 50);
+    color: gold;
+    box-shadow: 2px 2px 4px whitesmoke;
+}
+
+.choice-btn:focus{
+    background-color: rgb(63, 50, 50);
+    color: gold;
+    box-shadow: 2px 2px 4px whitesmoke;
+    border: 5px dotted lime;
+}
