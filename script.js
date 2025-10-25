@@ -74,3 +74,9 @@ const paper = document.getElementById(paper)
 const scissors = document.getElementById(scissors)
 const rock = document.getElementById(rock)
 
+/* Event Listeners */
+
+paper.addEventListener("click", (e) => playRound("paper")
+);
+scissors.addEventListener("click", (e) => playRound("scissors"));
+rock.addEventListener("click", (e) => playRound("rock"));
