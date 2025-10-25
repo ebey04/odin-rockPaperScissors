@@ -54,19 +54,6 @@ if (computerScore === 5 || humanScore === 5) {
 }
 
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    console.log(`Round ${i + 1}:`);
-    playRound();
-  }
-
-  console.log("Game Over!");
-  console.log(`Final Score → Human: ${humanScore}, Computer: ${computerScore}`);
-}
-
-
-
-
 /* DOM Elements */
 
 const resultsCont = document.getElementById("results")
